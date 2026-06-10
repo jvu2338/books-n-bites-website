@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Books N Bites - Cafe in Melbourne</title>
+<meta name="description" content="Books N Bites - your neighbourhood cafe for great coffee, fresh food, and a good book. Melbourne." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="widget/chat-widget.css" />
+</head>
+<body>
+
+<header>
+  <nav class="nav container">
+    <div class="logo">📖 Books N Bites</div>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#loyalty">Loyalty</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Great Coffee. Fresh Food. A Good Book.</h1>
+    <p>Books N Bites is your neighbourhood cafe in Melbourne — fresh coffee, daily-baked
+       treats, and all-day brunch. Got a question? Our chat assistant in the corner is happy
+       to help, any time.</p>
+    <a href="#menu" class="btn">View Menu</a>
+    <a href="#contact" class="btn-outline">Get in Touch</a>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <h2>Our Menu</h2>
+    <p class="section-sub">A taste of what we offer — ask our chat assistant about today's specials, dietary options, or catering.</p>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <span class="price">from $4.50</span>
+        <h3>Coffee</h3>
+        <p>Espresso, flat white, latte, cappuccino, long black, mocha, piccolo &amp; hot chocolate. Alt milks available (+$0.50).</p>
+      </div>
+      <div class="menu-card">
+        <span class="price">from $5.00</span>
+        <h3>Bakery &amp; Pastries</h3>
+        <p>Fresh muffins, croissants, banana bread &amp; scones baked in-house daily.</p>
+      </div>
+      <div class="menu-card">
+        <span class="price">from $9.50</span>
+        <h3>All Day Brunch</h3>
+        <p>Toasties, sandwiches, salads, eggs on toast, and rotating daily specials.</p>
+      </div>
+      <div class="menu-card">
+        <span class="price">Quote</span>
+        <h3>Catering</h3>
+        <p>Coffee carts, grazing boxes &amp; bulk orders for offices and events. 48 hours notice required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="loyalty" class="alt">
+  <div class="container">
+    <div class="loyalty">
+      <h2>Loyalty Program</h2>
+      <p>Buy 9 coffees, get the 10th free! Ask our staff for a loyalty card on your next visit.</p>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="container info-grid">
+    <div>
+      <h2 style="text-align:left">Opening Hours</h2>
+      <table class="hours">
+        <tr><td>Mon - Fri (Non-School Time)</td><td>6:00am - 4:00pm</td></tr>
+        <tr><td>Mon - Fri (School Term Time)</td><td>6:00am - 6:00pm</td></tr>
+        <tr><td>Saturday</td><td>6:30am - 2:30pm</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+    <div id="contact">
+      <h2 style="text-align:left">Get in Touch</h2>
+      <p><strong>Location:</strong> Melbourne</p>
+      <p><strong>Phone:</strong> <a href="tel:0393482868">03 9348 2868</a></p>
+      <p><strong>Email:</strong> <a href="mailto:aqcoffeee@gmail.com">aqcoffeee@gmail.com</a></p>
+      <p style="margin-top:16px;">Have a question about bookings, catering, or anything
+         else? Click the chat bubble in the bottom-right corner — our assistant can help, or
+         take your details so the team can get back to you.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Books N Bites, Melbourne. All rights reserved.</p>
+  </div>
+</footer>
+
+<!--
+  Chat widget configuration:
+  - data-webhook-url: replace with the live n8n webhook URL for this site
+    (provided by your chatbot provider)
+-->
+<script src="widget/chat-widget.js"
+        data-webhook-url="https://PLACEHOLDER-N8N-HOST/webhook/business-agent/chat/books-n-bites"
+        data-business-name="Books N Bites"
+        data-greeting="Hi! 👋 Ask me about our menu, hours, loyalty program, or catering."
+        data-color="#5b3a29"
+        defer></script>
+</body>
+</html>

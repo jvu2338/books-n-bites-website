@@ -10,53 +10,326 @@
 </head>
 <body>
 
-<header>
+<header class="site-header">
   <nav class="nav container">
-    <div class="logo">📖 Books N Bites</div>
+    <a href="#" class="logo">Books N Bites</a>
     <ul class="nav-links">
       <li><a href="#menu">Menu</a></li>
+      <li><a href="#specials">Specials</a></li>
       <li><a href="#loyalty">Loyalty</a></li>
-      <li><a href="#hours">Hours</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#hours">Hours &amp; Location</a></li>
     </ul>
+    <a href="#hours" class="btn btn-small">Get in Touch</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <h1>Great Coffee. Fresh Food. A Good Book.</h1>
-    <p>Books N Bites is your neighbourhood cafe in Melbourne — fresh coffee, daily-baked
-       treats, and all-day brunch. Got a question? Our chat assistant in the corner is happy
-       to help, any time.</p>
-    <a href="#menu" class="btn">View Menu</a>
-    <a href="#contact" class="btn-outline">Get in Touch</a>
+<section class="hero" style="background-image: url('images/hero-bg.jpg')">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="hero-kicker">Melbourne</p>
+    <h1>Great Coffee.<br>Fresh Food.<br>A Good Book.</h1>
+    <p>Your neighbourhood cafe — fresh coffee, daily-baked treats, hearty breakfasts and
+       a full kitchen menu. Got a question? Our chat assistant in the corner is happy to
+       help, any time.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn">View Menu</a>
+      <a href="#hours" class="btn-outline">Get in Touch</a>
+    </div>
   </div>
 </section>
 
 <section id="menu">
   <div class="container">
+    <p class="section-kicker">What we're serving</p>
     <h2>Our Menu</h2>
     <p class="section-sub">A taste of what we offer — ask our chat assistant about today's specials, dietary options, or catering.</p>
+
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-tab="drinks">Coffee &amp; Drinks</button>
+      <button class="tab-btn" data-tab="breakfast">Breakfast</button>
+      <button class="tab-btn" data-tab="kitchen">Kitchen Specials</button>
+      <button class="tab-btn" data-tab="burgers">Burgers</button>
+    </div>
+
+    <!-- Coffee & Drinks -->
+    <div class="tab-panel active" id="tab-drinks">
+      <div class="menu-detail">
+        <div class="menu-category">
+          <h3>Coffee</h3>
+          <ul class="menu-list">
+            <li><span>Latte</span><span class="price">$4.60</span></li>
+            <li><span>Espresso</span><span class="price">$4.00</span></li>
+            <li><span>Double Espresso</span><span class="price">$4.30</span></li>
+            <li><span>Long Black</span><span class="price">$4.50</span></li>
+            <li><span>Cappuccino</span><span class="price">$4.60</span></li>
+            <li><span>Flat White</span><span class="price">$4.60</span></li>
+            <li><span>Mocha</span><span class="price">$4.60</span></li>
+            <li><span>Long Macchiato</span><span class="price">$4.50</span></li>
+          </ul>
+          <p class="menu-note">Decaf and alternative milks (almond, oat, soy) available on request.</p>
+        </div>
+
+        <div class="menu-category">
+          <h3>Tea — $5.00</h3>
+          <ul class="menu-list">
+            <li><span>Black Tea / Earl Grey</span></li>
+            <li><span>Green Tea / Peppermint</span></li>
+            <li><span>Chamomile</span></li>
+            <li><span>French Earl Grey / Chai</span></li>
+            <li><span>Lemongrass Ginger</span></li>
+          </ul>
+        </div>
+
+        <div class="menu-category">
+          <h3>Hot Drinks</h3>
+          <ul class="menu-list">
+            <li><span>Hot Chocolate</span><span class="price">$4.60</span></li>
+            <li><span>Chai Latte</span><span class="price">$4.60</span></li>
+            <li><span>White Chocolate</span><span class="price">$4.60</span></li>
+            <li><span>Matcha</span><span class="price">$5.00</span></li>
+            <li><span>Italian Thick Chocolate (Classic / Mint / Hazelnut)</span><span class="price">$5.20</span></li>
+          </ul>
+        </div>
+
+        <div class="menu-category">
+          <h3>Cold Drinks</h3>
+          <ul class="menu-list">
+            <li><span>Iced Coffee</span><span class="price">$6.00</span></li>
+            <li><span>Iced Latte</span><span class="price">$5.80</span></li>
+            <li><span>Iced Chocolate</span><span class="price">$6.00</span></li>
+            <li><span>Iced Mocha</span><span class="price">$6.20</span></li>
+            <li><span>Iced Chai</span><span class="price">$6.50</span></li>
+            <li><span>Iced Matcha</span><span class="price">$6.80</span></li>
+            <li><span>Iced Strawberry Matcha</span><span class="price">$7.30</span></li>
+            <li><span>Milkshake</span><span class="price">$7.50</span></li>
+            <li><span>Smoothie</span><span class="price">$7.50</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-gallery">
+        <img src="images/iced-coffee.png" alt="Iced coffee from Books N Bites" loading="lazy">
+        <img src="images/iced-matcha.png" alt="Iced matcha from Books N Bites" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Breakfast -->
+    <div class="tab-panel" id="tab-breakfast">
+      <div class="menu-split">
+        <img class="menu-feature-img" src="images/breakfast.png" alt="Big Breakfast at Books N Bites" loading="lazy">
+        <ul class="menu-list menu-list--detailed">
+          <li>
+            <div class="item-head"><span>Big Breakfast</span><span class="price">$21.90</span></div>
+            <p>Two eggs of your choice with crispy bacon, chorizo sausage, mushroom, spinach, hash brown and grilled tomato on sourdough.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Light Breakfast</span><span class="price">$11.90</span></div>
+            <p>Two eggs — poached, fried or scrambled — served on sourdough. Additions: tomato, mushroom, spinach, avocado, hash brown or baked beans $3; bacon or chorizo sausage $4; smoked salmon $5.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Veggie Breakfast</span><span class="price">$20.90</span></div>
+            <p>Two eggs of your choice with hash brown, baked beans, sautéed mushroom, spinach and grilled tomato on sourdough.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Chilli Scramble Eggs</span><span class="price">$15.90</span></div>
+            <p>Scrambled eggs with red and green chillies on toast, served with spinach and chorizo crumble.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Egg Benedict — Crispy Bacon or Ham</span><span class="price">$16.90</span></div>
+            <p>Two poached eggs on English muffin with crispy bacon or ham and homemade hollandaise sauce.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Egg Benedict — Smoked Salmon</span><span class="price">$18.90</span></div>
+            <p>Two poached eggs on English muffin with smoked salmon, spinach and a touch of house tomato salsa and homemade hollandaise sauce.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>BB's Omelette — Ham</span><span class="price">$17.90</span></div>
+            <p>Virginia ham, grilled tomato and cheese, served with sourdough or multigrain toast.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>BB's Omelette — Crispy Bacon</span><span class="price">$18.90</span></div>
+            <p>Grilled crispy bacon, mushroom and spinach, served with sourdough or multigrain toast.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>BB's Omelette — Smoked Salmon</span><span class="price">$19.90</span></div>
+            <p>Smoked salmon, tomato, red onion, fetta cheese and spinach, served with sourdough or multigrain toast.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Avocado on Toast</span><span class="price">$15.90</span></div>
+            <p>Mashed avocado with extra virgin olive oil, lemon juice, salt and pepper, served on sourdough with a sprinkle of fetta cheese. Add a poached egg for $2.00 each.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>French Toast</span><span class="price">$15.90</span></div>
+            <p>French toast served with fresh banana, vanilla ice cream, honey and mixed berries.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>BB's Muesli</span><span class="price">$15.90</span></div>
+            <p>Special blended muesli with nuts, oats and fresh banana, served with honey, milk or yoghurt.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Egg &amp; Bacon Roll</span><span class="price">$10.80</span></div>
+            <p>Crispy bacon and fried eggs, freshly cooked and served on a Turkish roll.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Kitchen Specials -->
+    <div class="tab-panel" id="tab-kitchen">
+      <div class="menu-split menu-split--reverse">
+        <img class="menu-feature-img" src="images/steak.png" alt="Steak, Eggs and Chips at Books N Bites" loading="lazy">
+        <ul class="menu-list menu-list--detailed">
+          <li>
+            <div class="item-head"><span>Fisherman Basket</span><span class="price">$20.90</span></div>
+            <p>Assorted calamari, tempura prawn and fish cocktail served with beer-battered chips and garden salad.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Lemon Pepper Calamari</span><span class="price">$19.50</span></div>
+            <p>Hand-cut calamari lightly dusted in lemon &amp; pepper, cooked tender, served with beer-battered chips, garden salad and tartare sauce.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Fish &amp; Chips</span><span class="price">$19.50</span></div>
+            <p>Fish fillet and beer-battered chips with salad, fresh lemon and tartare sauce.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Chicken Parma</span><span class="price">$19.90</span></div>
+            <p>Chicken schnitzel with Virginia ham, Napoli sauce and mozzarella cheese, served with salad and chips.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Crispy Chicken</span><span class="price">$19.50</span></div>
+            <p>Fried chicken served with chips, salad and tomato &amp; BnB sauces.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Steak, Eggs &amp; Chips</span><span class="price">$26.90</span></div>
+            <p>Sirloin steak (200g), chips and eggs, served with gravy or mushroom sauce.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Special Cajun Chicken</span><span class="price">$14.90</span></div>
+            <p>Fresh grilled chicken marinated in Cajun spice, mashed avocado, fresh tomato, baby spinach, tasty cheese and BnB sauce.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Super BLT</span><span class="price">$13.90</span></div>
+            <p>Grilled crispy bacon with fried eggs, cheese, lettuce, fresh tomato and mayonnaise.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Beef Bulgogi</span><span class="price">$18.90</span></div>
+            <p>Bulgogi beef served with rice, capsicum, onion, kimchi and a fried egg with salad.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Chilli Garlic Prawn</span><span class="price">$21.90</span></div>
+            <p>Sautéed fresh prawns with chilli and garlic in a white wine cream sauce, served with steamed rice.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Chicken Garlic Butter</span><span class="price">$19.50</span></div>
+            <p>Sautéed fresh chicken with butter and garlic in a creamy sauce, served with steamed rice.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Risotto</span><span class="price">$21.90</span></div>
+            <p>Arborio rice with chicken breast, bacon, mushroom and spinach in a creamy or Napoli sauce.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Carbonara</span><span class="price">$15.90</span></div>
+            <p>Pasta with bacon and mushroom in a creamy sauce. Add chicken for $3.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Superfood Salmon Salad</span><span class="price">$19.50</span></div>
+            <p>Freshly grilled salmon with superfood salad, avocado, pumpkin seeds and sweet potato croutons, lemon vinegar dressing.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Smoky Thai Beef Salad</span><span class="price">$17.90</span></div>
+            <p>Marinated porterhouse beef and Virginia ham cooked with smoky flavour, served with garden salad and red wine vinegar honey dressing.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Chicken Tenderloin Salad</span><span class="price">$18.90</span></div>
+            <p>Freshly grilled chicken tenderloins served with garden salad, olive, avocado and red wine vinegar honey dressing.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-gallery">
+        <img src="images/fisherman.png" alt="Fisherman Basket at Books N Bites" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Burgers -->
+    <div class="tab-panel" id="tab-burgers">
+      <div class="menu-split">
+        <img class="menu-feature-img" src="images/burger.png" alt="Cheeseburger with chips at Books N Bites" loading="lazy">
+        <ul class="menu-list menu-list--detailed">
+          <li>
+            <div class="item-head"><span>Cheeseburger</span><span class="price">$16.90</span></div>
+            <p>Black Angus beef patty with grilled red onion, fresh tomato and cheese, BnB and BBQ sauce, served with beer-battered chips.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Steak Burger</span><span class="price">$19.50</span></div>
+            <p>Grain-fed porterhouse steak, crispy bacon, lettuce, fresh tomato, BnB and spicy sauce, served with beer-battered chips.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Big'Al Burger</span><span class="price">$18.90</span></div>
+            <p>Black Angus beef patty with grilled red onion, fried egg, crispy bacon, lettuce, fresh tomato and cheese, BnB and BBQ sauce, served with beer-battered chips.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Chicken Burger</span><span class="price">$17.90</span></div>
+            <p>Grilled chicken breast marinated in Cajun spices, crispy bacon, lettuce, fresh tomato, house salsa and BnB sauce, served with beer-battered chips.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Double Stack Burger</span><span class="price">$20.90</span></div>
+            <p>Double Black Angus beef patties, double bacon, double cheese, lettuce, tomato and gherkin, BnB and BBQ sauce, served with beer-battered chips.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Chicken Deluxe Burger</span><span class="price">$18.90</span></div>
+            <p>Fresh grilled chicken tenderloins with crispy bacon, cheese, avocado, fresh tomato, lettuce and BnB sauce, served with beer-battered chips.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Steak Sandwich</span><span class="price">$19.50</span></div>
+            <p>Grilled porterhouse fillet with salad mix, fresh tomato, grilled red onion and tomato relish on a toasted Turkish roll, with beer-battered chips.</p>
+          </li>
+          <li>
+            <div class="item-head"><span>Veggie Burger</span><span class="price">$17.90</span></div>
+            <p>Seasoned veggie patty with grilled red onion, lettuce, tomato, cheese, house salsa and BnB sauce, served with beer-battered chips.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="specials" class="alt specials" style="background-image: url('images/wood-board.jpg')">
+  <div class="specials-overlay"></div>
+  <div class="container">
+    <p class="section-kicker section-kicker--light">Special Due</p>
+    <h2 class="light">Today's Specials</h2>
+    <p class="section-sub light">Great value combos, available daily.</p>
     <div class="menu-grid">
-      <div class="menu-card">
-        <span class="price">from $4.50</span>
-        <h3>Coffee</h3>
-        <p>Espresso, flat white, latte, cappuccino, long black, mocha, piccolo &amp; hot chocolate. Alt milks available (+$0.50).</p>
+      <div class="menu-card menu-card--dark">
+        <span class="price">$10.80</span>
+        <h3>Egg &amp; Bacon Muffin with Coffee</h3>
+        <p>A warm savoury muffin paired with any regular coffee.</p>
       </div>
-      <div class="menu-card">
-        <span class="price">from $5.00</span>
-        <h3>Bakery &amp; Pastries</h3>
-        <p>Fresh muffins, croissants, banana bread &amp; scones baked in-house daily.</p>
+      <div class="menu-card menu-card--dark">
+        <span class="price">$9.80</span>
+        <h3>Sweet Muffin with Coffee</h3>
+        <p>Today's sweet muffin selection paired with any regular coffee.</p>
       </div>
-      <div class="menu-card">
-        <span class="price">from $9.50</span>
-        <h3>All Day Brunch</h3>
-        <p>Toasties, sandwiches, salads, eggs on toast, and rotating daily specials.</p>
+      <div class="menu-card menu-card--dark">
+        <span class="price">$12.50</span>
+        <h3>Ham &amp; Cheese Croissant with Coffee</h3>
+        <p>Toasted ham and cheese croissant paired with any regular coffee.</p>
       </div>
-      <div class="menu-card">
-        <span class="price">Quote</span>
-        <h3>Catering</h3>
-        <p>Coffee carts, grazing boxes &amp; bulk orders for offices and events. 48 hours notice required.</p>
+      <div class="menu-card menu-card--dark">
+        <span class="price">$12.50</span>
+        <h3>Plain Croissant with Coffee</h3>
+        <p>Fresh-baked plain croissant paired with any regular coffee.</p>
+      </div>
+      <div class="menu-card menu-card--dark">
+        <span class="price">$10.80</span>
+        <h3>Eggs &amp; Bacon Roll</h3>
+        <p>Freshly cooked eggs and crispy bacon on a Turkish roll.</p>
+      </div>
+      <div class="menu-card menu-card--dark">
+        <span class="price">from $16.90</span>
+        <h3>Burger with Chips</h3>
+        <p>Cheeseburger $16.90 &middot; Big'Al Burger $18.90 &middot; Steak Burger $19.50 — all served with chips.</p>
       </div>
     </div>
   </div>
@@ -100,13 +373,24 @@
   </div>
 </footer>
 
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
 <!--
   Chat widget configuration:
   - data-webhook-url: replace with the live n8n webhook URL for this site
     (provided by your chatbot provider)
 -->
 <script src="widget/chat-widget.js"
-        data-webhook-url="https://PLACEHOLDER-N8N-HOST/webhook/business-agent/chat/books-n-bites"
+        data-webhook-url="https://aqcd.app.n8n.cloud/webhook/books-n-bites/chat"
         data-business-name="Books N Bites"
         data-greeting="Hi! 👋 Ask me about our menu, hours, loyalty program, or catering."
         data-color="#5b3a29"
